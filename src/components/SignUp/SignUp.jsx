@@ -30,8 +30,7 @@ export class SignUp extends Component {
 
     try {
         const {user} = await auth.createUserWithEmailAndPassword(email,password)
-
-        createUserProfileDocument(user,displayName)
+        createUserProfileDocument(user,{displayName})
     }catch(err){
         console.log("ERROR"+err)
     }
