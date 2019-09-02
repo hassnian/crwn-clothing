@@ -6,7 +6,9 @@ import {auth} from "../../firebase/firebase.utils"
 import {connect} from "react-redux"
 
 
-const Header = ({currentUser}) => (
+const Header = ({currentUser}) => {
+    console.log(currentUser)
+    return(
     <div className="header">
         <Link to="">
             <Logo className="logo"/>
@@ -21,7 +23,7 @@ const Header = ({currentUser}) => (
             }
         </div>
     </div>
-)
+)}
 
 const mapStateToProps = state => ({
     currentUser:state.user.currentUser
